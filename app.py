@@ -1,0 +1,5 @@
+# print("Hello, World!")
+print("   /|")
+print("  /_|")
+print(" /__|")
+print("/___|")
