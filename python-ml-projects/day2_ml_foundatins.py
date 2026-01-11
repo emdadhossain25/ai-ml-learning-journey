@@ -121,6 +121,29 @@ for price in prices:
 print(f"Original prices: {prices}")
 print(f"After 10% discount: {discounted_prices}")
 
+#List comprehension (Pythonic way)
+squared = [x**2 for x in range(1, 6)]
+print(f"\nSquared numbers: {squared}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
