@@ -125,8 +125,28 @@ print(f"After 10% discount: {discounted_prices}")
 squared = [x**2 for x in range(1, 6)]
 print(f"\nSquared numbers: {squared}")
 
+# ============================================
+# PRACTICAL EXERCISE
+# ============================================
+print("\n" + "=" * 50)
+print("MINI PROJECT: Simple Prediction")
+print("=" * 50)
 
+# Simple linear relationship: y = 2x + 1
 
+def simple_model(x):
+    """Our first 'model' - just a linear function"""
+    return 2 * x + 1
+
+# Test our model
+test_inputs = [1, 2, 3, 4, 5]
+predictions = [simple_model(x) for x in test_inputs]
+
+print("Input -> Prediction")
+for x,y in zip(test_inputs,predictions):
+    print(f"{x} -> {y}")
+
+print("\n Day 2 complete! You've built a foundation for ML with data structures and functions.")
 
 
 
