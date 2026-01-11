@@ -14,3 +14,10 @@ print(f"Current day:{persons['day']}")
 print("Skills I am learning:")
 for skill in persons['skills']:
     print(f"- {skill}")
+
+data = [10, 20, 30, 40, 50]
+print(f"\n original data:{data}")
+data.append(60)
+print(f"After append: {data}")
+print(f"First 3 items: {data[:3]}")
+print(f"Last 2 items: {data[-2:]}")
