@@ -101,6 +101,31 @@ print(f"\nFull dataset : {my_data}")
 print(f"Training set (80%): {train}")
 print(f"Testing set (20%): {test}")
 
+# ============================================
+# LOOPS - Processing Datasets
+# ============================================
+
+print("\n" + "=" * 50)
+print("FUNCTIONS (ML Operations)")
+print("=" * 50)
+
+# processing each data point
+prices = [100, 150, 200, 175,225]
+discounted_prices =[]
+
+for price in prices:
+    discount = price * 0.1
+    new_price = price - discount
+    discounted_prices.append(new_price)
+
+print(f"Original prices: {prices}")
+print(f"After 10% discount: {discounted_prices}")
+
+
+
+
+
+
 
 
 
