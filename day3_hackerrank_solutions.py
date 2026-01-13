@@ -25,21 +25,7 @@ for _ in range(N):
     elif command[0] == "reverse":
         list.reverse()
 
-
-# Problem Tuples 
-
-if __name__ == '__main__':
-    n = int(raw_input())
-    integer_list = map(int, raw_input().split())
-    t = tuple(integer_list)
-    print (hash(t))
-
-
-# problem Runner-Up Score
-if __name__ == '__main__':
-    n = int(input())
-    arr = map(int, input().split())
-    
+   
 # Problem Tuples 
 
 if __name__ == '__main__':
