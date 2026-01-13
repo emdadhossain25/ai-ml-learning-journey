@@ -100,7 +100,7 @@ print("=" * 60)
 
 # Create age groups
 df['AgeGroup'] = pd.cut(df['Age'], bins=[0, 12, 18, 60, 100], 
-                         labels=['Child', 'Teen', 'Adult', 'Senior'])
+                        labels=['Child', 'Teen', 'Adult', 'Senior'])
 
 print("Survival by age group:")
 print(df.groupby('AgeGroup')['Survived'].mean())
