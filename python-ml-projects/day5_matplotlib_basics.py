@@ -108,3 +108,27 @@ plt.grid(axis='y', alpha=0.3)
 plt.savefig('plots/04_histogram.png', dpi=300, bbox_inches='tight')
 plt.close()
 print("✅ Saved: plots/04_histogram.png")
+
+
+# ============================================
+# 5. PIE CHART
+# ============================================
+
+print("5. Creating a pie chart...")
+
+labels = ['1st Class', '2nd Class', '3rd Class']
+sizes = [216, 184, 491]
+colors = ['#ff9999', '#66b3ff', '#99ff99']
+explode = (0.1, 0, 0)  # Explode 1st slice
+
+plt.figure(figsize=(10, 8))
+plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=90,
+        textprops={'fontsize': 12, 'fontweight': 'bold'})
+
+plt.title('Titanic Passenger Class Distribution', fontsize=16, fontweight='bold')
+plt.axis('equal')
+
+plt.savefig('plots/05_pie_chart.png', dpi=300, bbox_inches='tight')
+plt.close()
+print("✅ Saved: plots/05_pie_chart.png")
