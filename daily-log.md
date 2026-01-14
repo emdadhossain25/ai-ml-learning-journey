@@ -489,26 +489,4 @@ sns.heatmap(correlation, annot=True, cmap='RdYlGn',
 ```
 
 ---
-
-# **LinkedIn Post**
 ```
-
-Day 5: Data Visualization Magic! 📊🎨
-
-Transformed my Titanic analysis into stunning visual stories:
-
-✅ Mastered Matplotlib (7 chart types)
-✅ Learned Seaborn statistical plots
-✅ Created 22+ professional visualizations
-✅ Built comprehensive 8-panel dashboard
-
-Key finding visualized: Women had 3.9x higher survival rate than men (74% vs 19%) - clearly shown in one glance!
-
-Learned that effective data communication is 50% analysis, 50% visualization. Numbers tell, visuals sell.
-
-The dashboard I built today is portfolio-ready!
-
-Visualizations: [link to plots folder or best image]
-Code: [github link]
-
-#DataScience #DataVisualization #100DaysOfCode #Matplotlib #Seaborn
