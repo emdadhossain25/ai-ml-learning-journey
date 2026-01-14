@@ -89,3 +89,22 @@ print("✅ Saved: plots/03_bar_chart.png")
 
 
 
+# ============================================
+# 4. HISTOGRAM
+# ============================================
+
+print("4. Creating a histogram...")
+
+# Generate normal distribution
+data = np.random.normal(100,15, 1000)
+plt.figure(figsize=(10,6))
+plt.hist(data, bins=30, color='skyblue', edgecolor='black', alpha=0.7)
+plt.title('Distribution of IQ Scores', fontsize=16, fontweight='bold')
+plt.xlabel('IQ Score', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+plt.legend(fontsize=10)
+plt.grid(axis='y', alpha=0.3)
+
+plt.savefig('plots/04_histogram.png', dpi=300, bbox_inches='tight')
+plt.close()
+print("✅ Saved: plots/04_histogram.png")
