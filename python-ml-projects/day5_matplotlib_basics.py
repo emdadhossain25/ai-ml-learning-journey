@@ -168,3 +168,44 @@ plt.tight_layout()
 plt.savefig('plots/06_subplots_dashboard.png', dpi=300, bbox_inches='tight')
 plt.close()
 print("✅ Saved: plots/06_subplots_dashboard.png")
+# ============================================
+# 7. BOX PLOT
+# ============================================
+
+print("7. Creating a box plot...")
+
+# Simulate test scores for 4 groups
+data_groups = [np.random.normal(75, 10, 100),
+               np.random.normal(80, 8, 100),
+               np.random.normal(70, 12, 100),
+               np.random.normal(85, 7, 100)]
+
+plt.figure(figsize=(10, 6))
+bp = plt.boxplot(data_groups, labels=['Class A', 'Class B', 'Class C', 'Class D'],
+                 patch_artist=True, notch=True)
+
+# Color boxes
+colors = ['lightblue', 'lightgreen', 'lightcoral', 'lightyellow']
+for patch, color in zip(bp['boxes'], colors):
+    patch.set_facecolor(color)
+
+plt.title('Test Score Distribution by Class', fontsize=16, fontweight='bold')
+plt.ylabel('Score', fontsize=12)
+plt.grid(axis='y', alpha=0.3)
+
+plt.savefig('plots/07_box_plot.png', dpi=300, bbox_inches='tight')
+plt.close()
+print("✅ Saved: plots/07_box_plot.png")
+
+print("\n" + "=" * 60)
+print("✅ ALL PLOTS CREATED!")
+print("=" * 60)
+print("Check the 'plots' folder to see your visualizations!")
+print("\nYou just learned:")
+print("  • Line plots (trends over time)")
+print("  • Scatter plots (relationships)")
+print("  • Bar charts (comparisons)")
+print("  • Histograms (distributions)")
+print("  • Pie charts (proportions)")
+print("  • Subplots (dashboards)")
+print("  • Box plots (statistical summaries)")
