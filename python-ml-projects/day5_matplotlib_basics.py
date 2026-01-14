@@ -61,9 +61,31 @@ plt.savefig('plots/02_scatter_plot.png', dpi = 300, bbox_inches ='tight')
 plt.close()
 print("✅ Saved: plots/02_scatter_plot.png")
 
+# ============================================
+# 3. BAR CHART
+# ============================================
+
+print("3. Creating a bar chart...")
+
+categories = ['Python','Java', 'Javascript', 'C++', 'GO']
+popularity = [85, 60, 75, 55, 45]
+plt.figure(figsize =(10,6))
+bars = plt.bar(categories, popularity, color = ['#3776ab', '#f89820', '#f7df1e', '#00599c', '#00add8'])
 
 
-
+for bar in bars:
+    height = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width()/2., height,
+             f'{height}%', ha='center', va='bottom', fontsize=10, fontweight='bold')
+    
+plt.title('Programming Language Popularity 2026', fontsize = 16, fontweight='bold')
+plt.xlabel('Language', fontsize =12)
+plt.ylabel('Popularity Score',fontsize =12)
+plt.ylim(0,100)
+plt.grid(axis='y', alpha=0.3)
+plt.savefig('plots/03_bar_chart.png', dpi =300, bbox_inches = 'tight')
+plt.close()
+print("✅ Saved: plots/03_bar_chart.png")
 
 
 
