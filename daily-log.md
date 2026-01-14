@@ -358,3 +358,157 @@ def key_insights(self):
 ---
 
 ```
+
+## Day 5 - January 14, 2026
+
+### What I Created Today 🎨
+
+- ✅ Mastered Matplotlib (7 chart types)
+- ✅ Learned Seaborn statistical plots (9 visualizations)
+- ✅ Visualized Titanic analysis (6 comprehensive charts)
+- ✅ Built professional dashboard (8-panel masterpiece)
+- ✅ Created 22+ publication-quality visualizations
+
+### Visualization Types Mastered
+
+**Matplotlib:**
+
+- Line plots (trends)
+- Scatter plots (relationships)
+- Bar charts (comparisons)
+- Histograms (distributions)
+- Pie charts (proportions)
+- Box plots (statistical summary)
+- Subplots (multiple charts)
+
+**Seaborn:**
+
+- Distribution plots with KDE
+- Count plots (categorical)
+- Violin plots (distribution + box)
+- Regression plots (with trend lines)
+- Pair plots (all relationships)
+- Heatmaps (correlations)
+- Categorical plots
+
+### Code Files Created
+
+1. `day5_matplotlib_basics.py` - 7 chart types
+2. `day5_seaborn_intro.py` - 9 statistical plots
+3. `day5_titanic_visualization.py` - 6 analysis charts
+4. `day5_dashboard_project.py` - Professional dashboard
+
+### Key Insights Visualized
+
+From the Titanic dashboard:
+
+- **74% women survived vs 19% men** (clearly shown in bar chart)
+- **First class: 63% survival vs 3rd class: 24%** (class hierarchy visible)
+- **Children had highest survival** (52% vs adults 38%)
+- **Small families (2-4) survived more** (shown in line graph)
+- **Fare correlates with survival** (heatmap shows +0.26 correlation)
+
+### The Visual Story 📊
+
+"A picture is worth a thousand numbers! Today I transformed my Day 4 Titanic analysis from dry statistics into compelling visual stories. The dashboard I built shows at a glance what took paragraphs to explain before. Now I understand why every data science presentation is visual-first."
+
+### Technical Skills Gained
+
+- Chart customization (colors, styles, labels)
+- Subplot layouts and grid systems
+- Color palettes and themes
+- Annotation and labeling
+- Saving high-quality images (300 DPI)
+- Professional styling
+- Multi-panel dashboards
+- Statistical visualizations
+
+### Favorite Visualization
+
+"The comprehensive dashboard (22_comprehensive_dashboard.png) - it tells the complete Titanic story in one image. This is portfolio material!"
+
+### Challenges Overcome
+
+- Understanding figure vs axes in Matplotlib
+- Getting subplot layouts right
+- Choosing the right chart for each insight
+- Making charts readable and beautiful
+- Balancing information density
+
+### Real-World Application 💡
+
+"Every ML project presentation needs visualizations. Stakeholders don't read statistical tables - they need to SEE the patterns. Today I learned how to communicate data insights visually, which is crucial for real-world ML work."
+
+### Tomorrow's Goals (Day 6)
+
+- [ ] Introduction to Machine Learning concepts
+- [ ] scikit-learn basics
+- [ ] First ML model (Linear Regression)
+- [ ] Train model on real data
+- [ ] Visualize predictions
+
+### Stats
+
+- **Time spent:** 3.5 hours
+- **Visualizations created:** 22+
+- **Lines of code:** ~500+
+- **Plots folder size:** Growing beautifully!
+
+### Code I'm Proud Of
+
+**Dashboard subplot setup:**
+
+```python
+fig = plt.figure(figsize=(20, 12))
+gs = fig.add_gridspec(3, 4, hspace=0.3, wspace=0.3)
+# Multiple coordinated visualizations
+```
+
+**Seaborn correlation heatmap:**
+
+```python
+sns.heatmap(correlation, annot=True, cmap='RdYlGn',
+            center=0, fmt='.2f')
+```
+
+### Reflection
+
+"Day 5 was the most visually rewarding day yet. Seeing data come alive through charts was incredible. I now understand that data visualization isn't just 'making things pretty' - it's about effective communication. The dashboard I built would impress any hiring manager. I can now: load data (Pandas), analyze it (statistics), and present it (visualizations). That's a complete data science workflow!"
+
+### New Understanding
+
+"Why companies hire 'data visualization specialists' - it's a skill that bridges technical analysis and business communication. My dashboard turns 891 rows of data into an instant story."
+
+---
+
+**Current Streak:** 5 days 🔥  
+**Total Hours:** ~17 hours  
+**Projects:** 3 (DataProcessor, TitanicAnalyzer, Dashboard)  
+**Visualizations Created:** 22+
+
+```
+
+---
+
+# **LinkedIn Post**
+```
+
+Day 5: Data Visualization Magic! 📊🎨
+
+Transformed my Titanic analysis into stunning visual stories:
+
+✅ Mastered Matplotlib (7 chart types)
+✅ Learned Seaborn statistical plots
+✅ Created 22+ professional visualizations
+✅ Built comprehensive 8-panel dashboard
+
+Key finding visualized: Women had 3.9x higher survival rate than men (74% vs 19%) - clearly shown in one glance!
+
+Learned that effective data communication is 50% analysis, 50% visualization. Numbers tell, visuals sell.
+
+The dashboard I built today is portfolio-ready!
+
+Visualizations: [link to plots folder or best image]
+Code: [github link]
+
+#DataScience #DataVisualization #100DaysOfCode #Matplotlib #Seaborn
