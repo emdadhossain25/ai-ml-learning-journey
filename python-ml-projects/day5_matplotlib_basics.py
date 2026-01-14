@@ -132,3 +132,39 @@ plt.axis('equal')
 plt.savefig('plots/05_pie_chart.png', dpi=300, bbox_inches='tight')
 plt.close()
 print("✅ Saved: plots/05_pie_chart.png")
+
+
+# ============================================
+# 6. SUBPLOTS - Multiple Charts
+# ============================================
+
+print("6. Creating subplots...")
+
+fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+fig.suptitle('Multiple Visualizations Dashboard', fontsize=18, fontweight='bold')
+
+# Plot 1: Line
+x = np.linspace(0, 10, 100)
+axes[0, 0].plot(x, np.sin(x), 'b-', linewidth=2)
+axes[0, 0].set_title('Sine Wave')
+axes[0, 0].grid(True, alpha=0.3)
+
+# Plot 2: Scatter
+axes[0, 1].scatter(np.random.randn(100), np.random.randn(100), alpha=0.6)
+axes[0, 1].set_title('Random Scatter')
+axes[0, 1].grid(True, alpha=0.3)
+
+# Plot 3: Bar
+axes[1, 0].bar(['A', 'B', 'C', 'D'], [10, 25, 15, 30], color='coral')
+axes[1, 0].set_title('Category Comparison')
+axes[1, 0].grid(axis='y', alpha=0.3)
+
+# Plot 4: Histogram
+axes[1, 1].hist(np.random.normal(0, 1, 1000), bins=30, color='lightgreen', edgecolor='black')
+axes[1, 1].set_title('Normal Distribution')
+axes[1, 1].grid(axis='y', alpha=0.3)
+
+plt.tight_layout()
+plt.savefig('plots/06_subplots_dashboard.png', dpi=300, bbox_inches='tight')
+plt.close()
+print("✅ Saved: plots/06_subplots_dashboard.png")
