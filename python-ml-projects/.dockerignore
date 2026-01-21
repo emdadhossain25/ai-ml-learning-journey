@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+ml_env/
+venv/
+env/
+
+# Data
+data/
+*.csv
+
+# Plots
+plots/
+*.png
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+*.log
+.pytest_cache/

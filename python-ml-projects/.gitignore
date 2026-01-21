@@ -1,0 +1,9 @@
+plots/
+ml_env_py39_tf/
+ml_env/
+ml_env_tf/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
