@@ -31,7 +31,6 @@ np.random.seed(42)
 time_steps = 1000
 
 time_array = np.arange(time_steps)  # Changed from 'time' to 'time_array'
-time = np.arange(time_steps)
 trend = 0.02 * time_array + 10
 seasonality = 5 * np.sin(2 * np.pi * time_array / 50)
 noise = np.random.normal(0, 1, time_steps)
