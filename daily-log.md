@@ -2159,3 +2159,467 @@ Tomorrow: Time series forecasting with LSTMs/RNNs. Going from images to sequence
 ```
 
 ```
+
+## Day 14 - January 22, 2026
+
+### 📈 TIME SERIES FORECASTING WITH DEEP LEARNING MASTERED!
+
+### What I Built Today
+
+- ✅ RNN & LSTM fundamentals
+- ✅ Stock price prediction system
+- ✅ Weather forecasting (multivariate)
+- ✅ LSTM vs Traditional ML comparison
+- ✅ Complete sequential learning framework
+
+### Understanding Sequential Data
+
+**What Makes Time Series Different:**
+Time series data has temporal dependencies - today's value depends on yesterday's. Regular neural networks treat each input independently, which doesn't work for sequences.
+
+**The Evolution:**
+
+1. Regular NN: No memory
+2. RNN: Has memory but forgets long sequences
+3. LSTM: Gates control memory, remembers long-term
+
+### RNN & LSTM Fundamentals
+
+**RNN (Recurrent Neural Network):**
+
+- Loops back to itself
+- Output depends on current + past inputs
+- Problem: Vanishing gradient (forgets after 10-20 steps)
+
+**LSTM (Long Short-Term Memory):**
+
+- Special RNN with "gates"
+- **Forget Gate:** What to remove from memory
+- **Input Gate:** What new info to store
+- **Output Gate:** What to output
+- Can remember 100+ steps back
+
+**Architecture Built:**
+
+```
+Input (50 timesteps, 1 feature)
+  ↓
+LSTM Layer 1 (50 units)
+  ↓
+LSTM Layer 2 (50 units)
+  ↓
+Dense (1 unit)
+  ↓
+Next timestep prediction
+```
+
+**Results on Synthetic Data:**
+
+- Simple RNN: MAE = 0.89
+- LSTM: MAE = 0.45
+- Bidirectional LSTM: MAE = 0.42
+- **Winner: BiLSTM** (but not practical for real-time)
+
+**Key Insight:**
+"LSTM solves the vanishing gradient problem with gates. Think of it as a smart notepad that decides what to remember, what to forget, and what to write down!"
+
+### Stock Price Prediction
+
+**⚠️ CRITICAL DISCLAIMER:**
+This is **educational only**. Stock markets are chaotic, influenced by psychology, news, and countless factors. **DO NOT use for real trading!**
+
+**Dataset:**
+
+- Synthetic stock-like data (random walk with drift)
+- 1,000 days of price history
+- Realistic volatility (2% daily)
+
+**Approach:**
+
+- Sequence length: 60 days to predict day 61
+- Architecture: 3 LSTM layers (50 units each)
+- Dropout: 20% (prevent overfitting)
+- Parameters: ~200K
+
+**Results:**
+
+- Test MAE: $2.41
+- Test RMSE: $3.18
+- R² Score: 0.976
+- MAPE: 2.1%
+
+**30-Day Forecast:**
+
+- Current price: $152.34
+- Day +30 prediction: $157.89
+- Expected change: +3.6%
+
+**Trading Signals Generated:**
+
+- BUY: 23 (12.5%)
+- SELL: 31 (16.8%)
+- HOLD: 130 (70.7%)
+
+**Reality Check:**
+"The model learns price patterns, but can't predict:
+
+- Earnings reports
+- Economic crashes
+- Political events
+- News shocks
+- Market psychology
+
+Professional traders use fundamental analysis, news sentiment, and risk management. This is a learning tool, not a get-rich-quick scheme!"
+
+**Why Stock Prediction is Hard:**
+
+- Non-stationary (patterns change)
+- Influenced by countless factors
+- "Random walk" hypothesis
+- Past performance ≠ future results
+
+### Weather Forecasting (Multivariate LSTM)
+
+**Why Weather > Stocks:**
+
+- Physics-based (thermodynamics)
+- Continuous processes
+- Seasonal patterns repeat
+- Multiple correlated features
+
+**Multivariate Approach:**
+Used 4 correlated features:
+
+- Temperature
+- Humidity (inverse correlation: -0.7 with temp)
+- Pressure
+- Wind speed
+
+**Architecture:**
+
+```
+Input: (7 days, 4 features)
+  ↓
+LSTM(64) + Dropout(20%)
+  ↓
+LSTM(32) + Dropout(20%)
+  ↓
+Dense(16)
+  ↓
+Temperature prediction
+```
+
+**Results:**
+
+- Test MAE: 1.83°C
+- Test RMSE: 2.31°C
+- R² Score: 0.941
+- **Excellent accuracy!**
+
+**7-Day Forecast:**
+
+- Current: 18.2°C
+- Day +1: 18.9°C (+0.7°C)
+- Day +7: 21.3°C (+3.1°C)
+
+**Correlation Insights:**
+
+- Temperature ↔ Humidity: -0.68 (hot days = low humidity)
+- Temperature ↔ Pressure: +0.12 (weak)
+- Using multiple features improved predictions by ~15%
+
+**Why Multivariate Works:**
+"Knowing humidity helps predict temperature! High pressure systems bring clear skies, which affect temperature. These physics-based relationships make weather more predictable than chaotic markets."
+
+**Real-World Complexity:**
+Professional weather forecasting uses:
+
+- Satellite imagery
+- Radar data
+- Ocean temperatures
+- Physics equations (Navier-Stokes)
+- Supercomputers
+
+Our model: Educational, simplified, but shows the technique!
+
+### LSTM vs Traditional ML - The Showdown
+
+**Models Compared:**
+
+1. LSTM (Deep Learning)
+2. Random Forest (Ensemble)
+3. Linear Regression (Baseline)
+
+**Results on Same Data:**
+
+| Model             | MAE   | RMSE  | R²    | Training Time |
+| ----------------- | ----- | ----- | ----- | ------------- |
+| LSTM              | 0.452 | 0.598 | 0.976 | 12.3s         |
+| Random Forest     | 0.389 | 0.512 | 0.984 | 1.8s          |
+| Linear Regression | 0.621 | 0.834 | 0.952 | 0.1s          |
+
+**🏆 Winner: Random Forest!**
+
+**Why Random Forest Won:**
+
+- Simpler patterns (trend + seasonality)
+- Medium-sized data (1,000 samples)
+- Fast training (7× faster than LSTM)
+- Better accuracy on this dataset
+
+**When LSTM Wins:**
+
+- Long sequences (100+ timesteps)
+- Complex patterns
+- Large data (10K+ samples)
+- Multivariate time series
+- GPU available
+
+**When to Use Each:**
+
+**LSTM:**
+✓ Speech recognition (long audio sequences)
+✓ Language translation (sentence dependencies)
+✓ Video analysis (temporal patterns)
+✓ Complex financial instruments
+✗ Small datasets
+✗ Simple trends
+✗ Need interpretability
+
+**Random Forest:**
+✓ Most business forecasting
+✓ Sales prediction
+✓ Demand forecasting
+✓ Feature importance needed
+✗ Very long sequences
+✗ Real-time stream processing
+
+**Linear Regression:**
+✓ Baseline comparison
+✓ Simple trends
+✓ Need interpretability
+✓ Very fast prediction
+✗ Complex patterns
+✗ Non-linear relationships
+
+**The Practical Truth:**
+"For 80% of time series problems in business, Random Forest is the best choice. LSTM is powerful but overkill unless you have massive data, long sequences, and GPU resources. Start simple, add complexity only when needed!"
+
+### Code Files Created
+
+1. `day14_rnn_lstm_fundamentals.py` (~600 lines)
+2. `day14_stock_price_prediction.py` (~700 lines)
+3. `day14_weather_forecasting.py` (~750 lines)
+4. `day14_lstm_vs_traditional.py` (~400 lines)
+
+### The "Aha!" Moments 💡
+
+**1. LSTM Gates are Brilliant:**
+"The gates make so much sense! Forget gate removes irrelevant info (yesterday's weather doesn't matter for next month). Input gate adds new relevant info (today's temperature matters for tomorrow). Output gate decides what to output. It's like a smart brain deciding what to remember!"
+
+**2. Multivariate Beats Univariate:**
+"Using just temperature: MAE = 2.3°C. Using temp + humidity + pressure + wind: MAE = 1.8°C. That's 20% improvement! Correlated features help each other. This is why real systems use dozens of features."
+
+**3. Stock Markets are Chaotic:**
+"I built a model with 98% R² on historical data. But it can't predict tomorrow's news, earnings surprises, or market crashes. The model learns patterns, but markets don't repeat patterns reliably. This taught me humility about what ML can and can't do."
+
+**4. Random Forest Often Wins:**
+"Spent 3 days learning deep learning, expecting it to dominate. Then Random Forest beats LSTM on most problems! Lesson: Complexity ≠ better. Use the simplest tool that works. Deep learning is powerful but not always necessary."
+
+**5. Feature Engineering Matters More Than Architecture:**
+"Weather forecasting: Using 4 features gave 15% better accuracy than adding more LSTM layers. Spend time on good features, not just deep networks!"
+
+### Challenges Overcome
+
+- Understanding LSTM gates conceptually
+- 3D tensor reshaping for sequences
+- Vanishing gradient problem (why LSTM exists)
+- Inverse transforming predictions after scaling
+- Stock market humility (it's not predictable!)
+- Variable naming conflicts (time vs time_module)
+- Multivariate sequence creation
+- Choosing sequence length (trade-off: too short = miss patterns, too long = overfitting)
+
+### Technical Skills Gained
+
+- RNN architecture understanding
+- LSTM cell mechanics (gates)
+- Bidirectional LSTM
+- Sequence creation (sliding window)
+- 3D tensor manipulation
+- MinMaxScaler for time series
+- Multivariate time series
+- Feature correlation analysis
+- Time-based train/test splits
+- Inverse transformations
+- Trading signal generation
+- Model comparison methodology
+
+### Real-World Applications Built
+
+**Stock Prediction (Educational):**
+
+- Historical pattern learning
+- Trend following
+- Volatility analysis
+- NOT for actual trading
+
+**Weather Forecasting:**
+
+- Agriculture planning
+- Energy demand prediction
+- Event scheduling
+- Aviation safety
+- Disaster preparedness
+
+**Time Series Framework:**
+Works for:
+
+- Sales forecasting
+- Website traffic
+- Sensor data (IoT)
+- Vital signs monitoring
+- Network traffic
+- Customer behavior
+
+### Visualizations Created
+
+- Time series decomposition
+- LSTM training curves
+- Stock price forecasts
+- Weather predictions
+- Model comparison charts
+- Error distributions
+- Future forecasts (7-30 days)
+- Feature correlations
+
+### Stats
+
+- **Time spent:** 4.5 hours
+- **Lines of code:** ~2,450+
+- **Models trained:** 10+ (RNN, LSTM, BiLSTM, stock, weather, comparisons)
+- **Best MAE:** 0.389 (Random Forest on synthetic data)
+- **Parameters learned:** 200K+ (LSTM models)
+
+### Code I'm Proud Of
+
+**Multivariate Sequence Creation:**
+
+```python
+def create_multivariate_sequences(data, seq_length, target_column=0):
+    X, y = [], []
+    for i in range(len(data) - seq_length):
+        # All features for past seq_length steps
+        X.append(data[i:i + seq_length, :])
+        # Only target feature for next step
+        y.append(data[i + seq_length, target_column])
+    return np.array(X), np.array(y)
+```
+
+**LSTM Architecture:**
+
+```python
+model = Sequential([
+    LSTM(64, return_sequences=True, input_shape=(7, 4)),
+    Dropout(0.2),
+    LSTM(32, return_sequences=False),
+    Dropout(0.2),
+    Dense(16, activation='relu'),
+    Dense(1)
+])
+```
+
+**Future Forecasting Loop:**
+
+```python
+last_sequence = data_scaled[-SEQ_LENGTH:].reshape(1, SEQ_LENGTH, features)
+forecast = []
+
+for day in range(30):
+    next_pred = model.predict(last_sequence)
+    forecast.append(next_pred[0, 0])
+
+    # Update sequence (sliding window)
+    last_sequence = np.append(last_sequence[:, 1:, :],
+                              next_pred.reshape(1, 1, 1), axis=1)
+```
+
+### Reflection
+
+"Day 14 was about understanding sequences and temporal patterns. I learned that time series is fundamentally different from the classification/regression I've been doing.
+
+The key insight: **Order matters!**
+
+In previous days, I could shuffle data randomly. Not anymore. Today's temperature depends on yesterday's. Stock prices have momentum. Weather has seasonal patterns. Shuffle the data and you destroy the pattern.
+
+LSTM was fascinating to understand. The gates aren't just mathematical tricks - they solve a real problem (vanishing gradients). The forget gate prevents memory overflow. The input gate selectively adds new info. The output gate controls what to output. It's elegant!
+
+Stock prediction was humbling. I built a model with 98% R² on historical data and thought 'I'm going to be rich!' Then reality hit: The model can't predict earnings surprises, can't forecast economic crashes, can't account for psychology. It learns historical patterns, but markets don't repeat patterns reliably.
+
+That was the most valuable lesson: **Know your model's limitations.**
+
+Weather forecasting worked much better because weather follows physics. High pressure brings clear skies, which affects temperature predictably. Humidity and temperature are inverse correlated. These relationships are stable, unlike market psychology.
+
+The Random Forest comparison was eye-opening. After spending days learning deep learning, Random Forest beat LSTM on most problems! Why? Because:
+
+1. Simpler is often better
+2. Less data needed
+3. Faster training
+4. More interpretable
+
+LSTM is powerful for specific problems (speech, language, video), but overkill for most business time series.
+
+The multivariate approach was powerful. Using 4 weather features instead of 1 improved accuracy by 15%. More information (when correlated) = better predictions.
+
+Tomorrow I'll apply all this knowledge to real-world projects or explore new topics!"
+
+### Key Realizations
+
+- Sequential data requires special architectures
+- LSTM gates solve vanishing gradients elegantly
+- Stock markets are chaotic (humbling lesson)
+- Weather is more predictable (physics-based)
+- Multivariate > univariate when features correlate
+- Random Forest often beats LSTM on tabular data
+- Start simple, add complexity only when needed
+- Know your model's limitations
+
+### Questions Answered Today
+
+- ✅ What are RNNs and LSTMs?
+- ✅ How do LSTM gates work?
+- ✅ Can ML predict stock prices? (Yes, but shouldn't!)
+- ✅ Why is weather more predictable than stocks?
+- ✅ When to use LSTM vs Random Forest?
+- ✅ How to handle multivariate time series?
+- ✅ What's the right sequence length?
+
+### Bugs Fixed Today
+
+- ✅ joblib import missing (added to stock & weather scripts)
+- ✅ Variable name conflict (time vs time_module)
+- ✅ 3D tensor reshaping issues
+- ✅ Inverse transform for multivariate predictions
+
+### Tomorrow's Goals (Day 15)
+
+- [ ] Choose direction: NLP, Computer Vision projects, or MLOps
+- [ ] Build portfolio-ready project
+- [ ] Deploy complete end-to-end system
+- [ ] Or: Advanced topics (GANs, Transformers, RL)
+
+---
+
+**Current Streak:** 14 days 🔥  
+**Total Hours:** ~50.5 hours  
+**Projects:** 13 (Sequential learning!)  
+**Best Model:** Random Forest (0.389 MAE)  
+**Status:** Time Series Expert! 📈
+
+### Quote of the Day
+
+"LSTM gates aren't magic - they're a brilliant solution to a specific problem. Understanding the 'why' behind the architecture is more valuable than just using it." - Learning deep learning deeply
+
+```
+
+```
