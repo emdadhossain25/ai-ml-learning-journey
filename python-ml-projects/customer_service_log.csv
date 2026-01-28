@@ -1,0 +1,9 @@
+timestamp,customer_id,message,sentiment,confidence,is_urgent,urgency_score,category,suggested_response,recommended_action
+2026-01-28 22:17:33,CUST001,Your product is amazing! Best purchase I've made this year. Thank you!,positive,70.0%,True,2,general,We appreciate your feedback! Is there anything else we can help with?,🟡 RESPOND WITHIN 1 HOUR
+2026-01-28 22:17:33,CUST002,URGENT! My payment failed and I need this resolved IMMEDIATELY!,neutral,60.0%,True,5,billing,Thanks for contacting us. What can I do for you?,🟡 RESPOND WITHIN 1 HOUR
+2026-01-28 22:17:33,CUST003,The app keeps crashing. This is the worst experience ever.,negative,70.0%,False,0,technical,I understand your frustration. A senior agent will assist you shortly.,🟡 ESCALATE TO HUMAN AGENT
+2026-01-28 22:17:33,CUST004,"Hello, can you help me track my order? Order #12345",neutral,60.0%,False,1,general,I'm here to help. Could you provide more details?,🟢 STANDARD RESPONSE
+2026-01-28 22:17:33,CUST005,How do I reset my password? I can't login to my account.,neutral,60.0%,False,0,account,I'm here to help. Could you provide more details?,🟢 STANDARD RESPONSE
+2026-01-28 22:17:33,CUST006,TERRIBLE service! I want a full refund NOW! This is unacceptable!,negative,70.0%,True,3,billing,We sincerely apologize for the inconvenience. Let me connect you with a specialist.,🔴 ESCALATE TO SENIOR AGENT IMMEDIATELY
+2026-01-28 22:17:33,CUST007,Thanks for the quick delivery. Product works great!,positive,70.0%,False,1,shipping,Wonderful to hear! We're here if you need anything else.,🟢 AUTO-RESPOND OK / LOG FOR ANALYTICS
+2026-01-28 22:17:33,CUST008,My bill shows incorrect charges. Can someone review this?,neutral,60.0%,False,0,billing,Thank you for reaching out. How can I assist you today?,🟢 STANDARD RESPONSE
