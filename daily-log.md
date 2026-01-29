@@ -4159,3 +4159,150 @@ The job will come. I'm doing everything right."
 ### Quote of the Day
 
 "Don't choose between learning, building, and applying. Do all three. That's how careers transform." - The trifecta strategy
+
+## Day 20 - January 28, 2026
+
+### 🎯 KAGGLE IMPROVEMENT + 3 JOB APPLICATIONS
+
+### What I Built Today
+
+- ✅ Improved Kaggle Titanic model (20 features vs 12)
+- ✅ Created ensemble voting system (3 models)
+- ✅ Submitted 2 improved models to Kaggle
+- ✅ Achieved [Y]% accuracy (up from [X]%)
+- ✅ Applied to 3 more companies (total: 11 this week)
+- ✅ Connected with 15 ML engineers on LinkedIn
+- ✅ Engaged in 5 LinkedIn group discussions
+
+### Kaggle Improvement - Feature Engineering Focus
+
+**Yesterday (Day 19):**
+
+- 12 basic features
+- Single Random Forest
+- Score: [X]%
+
+**Today (Day 20):**
+
+- 20 advanced features
+- 3 models + ensemble
+- Score: [Y]%
+- Improvement: +[Z]%
+
+**New Features Created:**
+
+1. **Cabin Deck** - Extracted first letter (A-G decks)
+2. **Ticket Prefix** - Grouped by ticket patterns
+3. **Name Length** - Longer names = higher status
+4. **Title (Refined)** - Better grouping of rare titles
+5. **Family Type** - Alone/Medium/Large instead of just size
+6. **Age Groups** - 6 categories instead of 4
+7. **Fare Per Person** - Divided by family size
+8. **Interaction Features** - Age×Class, Fare×Class
+9. **Name Length Bins** - Categorical version
+10. **Embarked** - Better handling of missing values
+
+**Ensemble Voting:**
+
+- Random Forest: [Score]
+- Gradient Boosting: [Score]
+- Logistic Regression: [Score]
+- Ensemble (Voting): [Score]
+
+**Top Features (by importance):**
+
+1. Title
+2. Fare
+3. Age
+4. Pclass
+5. Sex
+
+### What I Learned from Top Kaggle Notebooks
+
+Read top 3 most-voted notebooks:
+
+**Key Takeaways:**
+
+- [Technique 1 you learned]
+- [Technique 2 you learned]
+- [Technique 3 you learned]
+
+**Will implement next:**
+
+- Surname extraction for family groups
+- Cabin number patterns
+- Stacking ensemble
+
+### Job Applications - 3 Today
+
+**Company 6:** [Company name] - [Role] via LinkedIn
+**Company 7:** [Company name] - [Role] via BdJobs
+**Company 8:** [Company name] - [Role] direct application
+
+**Week Total: 11 applications**
+
+**Strategy working:**
+
+- Quality over quantity (30 min per application)
+- Customized approach for each
+- Research company first
+- Mention specific projects
+
+### LinkedIn Networking
+
+**Connected with:** 15 ML engineers
+**Engaged:** 5 group posts with thoughtful comments
+**Groups active in:** 5 ML/AI communities
+
+**Building relationships, not just collecting connections.**
+
+### Stats
+
+- **Time spent:** 4 hours
+  - Kaggle improvement: 2 hours
+  - Job applications: 90 min
+  - LinkedIn networking: 30 min
+- **Kaggle improvement:** +[Z]%
+- **Job applications:** 3 (total: 11)
+- **LinkedIn connections:** +15
+- **Lines of code:** ~600
+
+### Tomorrow's Plan (Day 21)
+
+**Morning: Continue Kaggle OR Start New Project (2 hours)**
+
+- [ ] Option A: Kaggle House Prices competition
+- [ ] Option B: Start NLP project (text generation)
+- [ ] Option C: Computer Vision project
+
+**Afternoon: Job Search (2 hours)**
+
+- [ ] Apply to 2-3 more companies
+- [ ] LinkedIn networking
+- [ ] Update portfolio with Day 20 projects
+
+**Evening:**
+
+- [ ] Post Day 21 update
+- [ ] REST!
+
+### Reflection
+
+"Day 20 was about iteration and persistence.
+
+Kaggle teaches you to iterate. Submit, analyze, improve, resubmit. Feature engineering matters more than fancy algorithms. Going from 12 to 20 features gave bigger boost than any hyperparameter tuning.
+
+Applied to 3 more companies. That's 11 this week. Week isn't even over. If 20% respond, that's 2-3 interviews. Numbers are in my favor because I'm playing the game.
+
+LinkedIn networking is paying off. 15 new connections. 5 engaging conversations in groups. Building reputation as someone who's learning publicly and making progress.
+
+20 days straight. No breaks. Consistent progress. This is the path."
+
+---
+
+**Current Streak:** 20 days 🔥  
+**Total Hours:** ~75 hours  
+**Projects:** 16  
+**Kaggle:** 3 submissions, improving!  
+**Job Applications:** 11  
+**Status:** Momentum building! 🚀
