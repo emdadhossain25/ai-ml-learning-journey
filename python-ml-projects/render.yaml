@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: sentiment-api
+    name: sentiment-api-emdad
     env: python
+    runtime: python-3.11
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn day21_sentiment_api:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.0
+        value: 3.11.0
