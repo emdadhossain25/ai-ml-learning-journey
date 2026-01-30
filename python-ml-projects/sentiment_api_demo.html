@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .positive {
+            background: #d4edda;
+            border: 2px solid #28a745;
+        }
+        .negative {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+        }
+        .neutral {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+        }
+        .sentiment {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .confidence {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .probabilities {
+            font-size: 14px;
+            color: #666;
+        }
+        .loading {
+            text-align: center;
+            display: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Sentiment Analysis API Demo</h1>
+        <p style="text-align: center; color: #666;">
+            Enter your text below to analyze its sentiment (positive/negative/neutral)
+        </p>
+        
+        <textarea id="textInput" placeholder="Type or paste your text here... 
+
+Example: 'This product is amazing! Best purchase I've ever made!'"></textarea>
+        
+        <button onclick="analyzeSentiment()">Analyze Sentiment</button>
+        
+        <div class="loading" id="loading">
+            <p>Analyzing...</p>
+        </div>
+        
+        <div class="result" id="result">
+            <div class="sentiment" id="sentiment"></div>
+            <div class="confidence" id="confidence"></div>
+            <div class="probabilities" id="probabilities"></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Built by <strong>Emdad Hossain</strong></p>
+        <p>
+            <a href="https://emdadhossain25.github.io/emdad-portfolio/" target="_blank">Portfolio</a> | 
+            <a href="https://github.com/emdadhossain25" target="_blank">GitHub</a> | 
+            <a href="https://www.kaggle.com/emdadhossain25" target="_blank">Kaggle</a>
+        </p>
+    </div>
+    
+    <script>
+        // UPDATE THIS with your Render.com URL!
+        const API_URL = 'https://sentiment-api-emdad.onrender.com';
+        
+        async function analyzeSentiment() {
+            const text = document.getElementById('textInput').value.trim();
+            
+            if (!text) {
+                alert('Please enter some text to analyze');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('result').style.display = 'none';
+            
+            try {
+                const response = await fetch(`${API_URL}/analyze`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+                
+                const data = await response.json();
+                
+                // Hide loading
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show result
+                const resultDiv = document.getElementById('result');
+                resultDiv.className = `result ${data.sentiment}`;
+                resultDiv.style.display = 'block';
+                
+                // Sentiment
+                const sentimentEmoji = {
+                    'positive': '😊',
+                    'negative': '😞',
+                    'neutral': '😐'
+                };
+                
+                document.getElementById('sentiment').innerHTML = 
+                    `${sentimentEmoji[data.sentiment]} Sentiment: ${data.sentiment.toUpperCase()}`;
+                
+                // Confidence
+                document.getElementById('confidence').innerHTML = 
+                    `Confidence: ${(data.confidence * 100).toFixed(1)}%`;
+                
+                // Probabilities
+                const probs = data.probabilities;
+                document.getElementById('probabilities').innerHTML = 
+                    `Probabilities: Positive ${(probs.positive * 100).toFixed(1)}% | ` +
+                    `Negative ${(probs.negative * 100).toFixed(1)}% | ` +
+                    `Neutral ${(probs.neutral * 100).toFixed(1)}%`;
+                
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                alert('Error analyzing sentiment: ' + error.message);
+            }
+        }
+        
+        // Allow Enter key to analyze
+        document.getElementById('textInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                analyzeSentiment();
+            }
+        });
+    </script>
+</body>
+</html>
