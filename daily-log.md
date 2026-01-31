@@ -4306,3 +4306,156 @@ LinkedIn networking is paying off. 15 new connections. 5 engaging conversations 
 **Kaggle:** 3 submissions, improving!  
 **Job Applications:** 11  
 **Status:** Momentum building! 🚀
+
+## Day 22 - January 30, 2026
+
+### 🏠 KAGGLE HOUSE PRICES - REGRESSION COMPETITION
+
+### What I Built Today
+
+- ✅ Joined Kaggle House Prices competition
+- ✅ Built regression model (5 models + ensemble)
+- ✅ Submitted 2 versions to Kaggle
+- ✅ Score: [YOUR SCORE]
+- ✅ Applied to 3 companies (total: 16)
+- ✅ Followed up on week-old applications
+- ✅ 22 DAYS STREAK! 🔥
+
+### House Prices - My Second Kaggle Competition
+
+**Problem:** Predict house sale prices (regression)
+
+**Dataset:**
+
+- 1,460 training houses
+- 1,459 test houses
+- 79 features (numerical + categorical)
+- Target: SalePrice ($34,900 - $755,000)
+
+**Feature Engineering Created:**
+
+1. TotalSF = Total square footage
+2. TotalBath = All bathrooms combined
+3. TotalPorchSF = All porch areas
+4. HouseAge = Years since built
+5. RemodAge = Years since remodeled
+6. IsRemodeled = Binary flag
+7. HasPool, HasGarage, HasBasement = Binary flags
+8. OverallQualCond = Quality × Condition
+9. QualGrLiv = Quality × Living Area
+10. QualBsmt = Quality × Basement
+11. QualGarage = Quality × Garage
+
+**Missing Values Handled:**
+
+- Categorical "None" values (no pool, etc): Fill with "None"
+- Numerical zeros (no garage area, etc): Fill with 0
+- LotFrontage: Fill with neighborhood median
+- Others: Fill with mode
+
+**Models Trained:**
+
+| Model             | CV RMSE | Train R² |
+| ----------------- | ------- | -------- |
+| Ridge             | [Score] | [R²]     |
+| Lasso             | [Score] | [R²]     |
+| ElasticNet        | [Score] | [R²]     |
+| Random Forest     | [Score] | [R²]     |
+| Gradient Boosting | [Score] | [R²]     |
+
+**Best Model:** [Your best]
+**Ensemble:** Average of all 5 models
+
+**Kaggle Submission:**
+
+- Best single model: [Score]
+- Ensemble: [Score]
+- Leaderboard: [Rank/Percentile]
+
+### Regression vs Classification - Key Differences
+
+**Classification (Titanic):**
+
+- Predict category (survived yes/no)
+- Metric: Accuracy (% correct)
+- Output: 0 or 1
+- Loss: Binary cross-entropy
+
+**Regression (House Prices):**
+
+- Predict number (price)
+- Metric: RMSE ($ error)
+- Output: Continuous value
+- Loss: Mean squared error
+
+**Different techniques needed!**
+
+### What I Learned
+
+**1. Log Transformation:**
+
+```python
+y_train_log = np.log1p(y_train)
+# Train on log scale
+predictions_log = model.predict(X_test)
+# Convert back
+predictions = np.expm1(predictions_log)
+```
+
+Why? House prices are right-skewed. Log makes them normal.
+
+**2. RobustScaler:**
+Better than StandardScaler for data with outliers (mansions!)
+
+**3. Feature Engineering Matters:**
+Going from 79 → 90+ features improved score significantly
+
+**4. Model Averaging:**
+Ensemble of 5 models → more stable than single model
+
+### Job Search - 3 Applications + Follow-ups
+
+**Applied to:**
+
+- Company 10 (LinkedIn)
+- Company 11 (BdJobs)
+- Company 12 (Direct)
+
+**Followed up on:**
+
+- Day 18 applications (1 week old)
+- Day 19 applications (1 week old)
+
+**Total applications:** 16
+
+**Strategy working:** Quality applications + follow-ups
+
+### Stats
+
+- **Time spent:** 4 hours
+  - Kaggle project: 2.5 hours
+  - Job applications: 90 min
+- **Kaggle score:** [YOUR SCORE]
+- **Job applications:** 3 (total: 16)
+- **Follow-ups sent:** 5
+
+### Tomorrow's Plan (Day 23)
+
+**Morning: Choose ONE (2 hours)**
+
+- [ ] Improve Kaggle House Prices
+- [ ] Third Kaggle competition
+- [ ] NLP text generation project
+- [ ] Computer Vision project
+
+**Afternoon: Job Search (2 hours)**
+
+- [ ] Apply to 2-3 companies
+- [ ] LinkedIn networking
+
+---
+
+**Current Streak:** 22 days 🔥  
+**Kaggle:** 2 competitions active  
+**Job Applications:** 16  
+**Status:** Regression learned! 🏠
