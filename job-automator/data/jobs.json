@@ -1,0 +1,69 @@
+[
+  {
+    "id": "job_001",
+    "title": "Senior Machine Learning Engineer",
+    "company": "Brain Station 23",
+    "location": "Dhaka, Bangladesh (Hybrid)",
+    "posted_date": "2026-01-30",
+    "source": "BdJobs",
+    "url": "https://www.bdjobs.com/job-001",
+    "description": "\nWe are seeking a Senior Machine Learning Engineer to join our AI team.\n\nResponsibilities:\n- Design and implement ML models for production\n- Lead ML projects from conception to deployment\n- Mentor junior team members\n- Collaborate with product and engineering teams\n- Deploy models to production environments\n\nRequirements:\n- 5+ years software engineering experience\n- Strong Python programming skills\n- Experience with TensorFlow, scikit-learn, or PyTorch\n- Production ML deployment experience\n- Team leadership capability\n- Excellent communication skills\n\nNice to have:\n- Android/Mobile development background\n- Kaggle participation\n- Open source contributions\n\nBenefits:\n- Competitive salary\n- Flexible work arrangements\n- Health insurance\n- Learning budget\n",
+    "match_score": 80,
+    "match_reasons": [
+      "ML/AI role - matches your specialization",
+      "Python required - you have this skill",
+      "Senior role - matches your 15 years experience"
+    ],
+    "red_flags": [
+      "None"
+    ],
+    "recommendation": "Apply",
+    "cover_letter": "Dear Hiring Manager at Brain Station 23,\n\nI am writing to express my strong interest in the Senior Machine Learning Engineer position at Brain Station 23.\n\nWith 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.\n\nOver the past 22 days, I've built 18+ ML projects including:\n- Production sentiment analysis API (deployed and live)\n- Customer churn prediction system (85% accuracy, $300K business impact)\n- Deep learning image classifier (99.3% accuracy using transfer learning)\n- Active participation in 2 Kaggle competitions\n\nWhat sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.\n\nPortfolio: https://emdadhossain25.github.io/emdad-portfolio/\nGitHub: https://github.com/emdadhossain25\nKaggle: https://www.kaggle.com/emdadhossain25\n\nI would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Brain Station 23's success.\n\nBest regards,\nEmdad Hossain\nemdad.hossain321@gmail.com\n+880 1929 761478\n",
+    "status": "Ready to apply",
+    "processed_date": "2026-02-01T22:39:25.260062"
+  },
+  {
+    "id": "job_002",
+    "title": "ML Engineer",
+    "company": "Reve Systems",
+    "location": "Remote",
+    "posted_date": "2026-01-29",
+    "source": "LinkedIn",
+    "url": "https://www.linkedin.com/jobs/job-002",
+    "description": "\nML Engineer position for AI-powered customer service platform.\n\nWhat you'll do:\n- Build NLP models for chatbots\n- Deploy ML models as APIs\n- Work on sentiment analysis systems\n- Optimize model performance\n\nRequirements:\n- Python, ML frameworks\n- NLP experience\n- API development (Flask/FastAPI)\n- Remote work capability\n\nBonus:\n- Deployed ML APIs before\n- Portfolio of ML projects\n",
+    "match_score": 70,
+    "match_reasons": [
+      "ML/AI role - matches your specialization",
+      "Python required - you have this skill",
+      "Remote-friendly - your preference"
+    ],
+    "red_flags": [
+      "None"
+    ],
+    "recommendation": "Apply",
+    "cover_letter": "Dear Hiring Manager at Reve Systems,\n\nI am writing to express my strong interest in the ML Engineer position at Reve Systems.\n\nWith 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.\n\nOver the past 22 days, I've built 18+ ML projects including:\n- Production sentiment analysis API (deployed and live)\n- Customer churn prediction system (85% accuracy, $300K business impact)\n- Deep learning image classifier (99.3% accuracy using transfer learning)\n- Active participation in 2 Kaggle competitions\n\nWhat sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.\n\nPortfolio: https://emdadhossain25.github.io/emdad-portfolio/\nGitHub: https://github.com/emdadhossain25\nKaggle: https://www.kaggle.com/emdadhossain25\n\nI would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Reve Systems's success.\n\nBest regards,\nEmdad Hossain\nemdad.hossain321@gmail.com\n+880 1929 761478\n",
+    "status": "Ready to apply",
+    "processed_date": "2026-02-01T22:39:33.343006"
+  },
+  {
+    "id": "job_003",
+    "title": "Junior Data Analyst",
+    "company": "Generic Corp",
+    "location": "Dhaka (On-site only)",
+    "posted_date": "2026-01-28",
+    "source": "BdJobs",
+    "url": "https://www.bdjobs.com/job-003",
+    "description": "\nEntry-level data analyst position.\n\nRequirements:\n- Fresh graduate\n- Basic Excel, PowerPoint\n- Willingness to learn\n\nSalary: 25,000 BDT/month\nOn-site: 9 AM - 6 PM, 6 days/week\n",
+    "match_score": 0,
+    "match_reasons": [
+      "Match based on keywords"
+    ],
+    "red_flags": [
+      "None"
+    ],
+    "recommendation": "Skip",
+    "cover_letter": null,
+    "status": "Skipped - low match",
+    "processed_date": "2026-02-01T22:39:35.799862"
+  }
+]
