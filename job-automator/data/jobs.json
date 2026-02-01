@@ -1,69 +1,25 @@
 [
   {
     "id": "job_001",
-    "title": "Senior Machine Learning Engineer",
-    "company": "Brain Station 23",
+    "title": "Software Engineer (Web + ML Integrations)",
+    "company": "Optimizely",
     "location": "Dhaka, Bangladesh (Hybrid)",
-    "posted_date": "2026-01-30",
-    "source": "BdJobs",
-    "url": "https://www.bdjobs.com/job-001",
-    "description": "\nWe are seeking a Senior Machine Learning Engineer to join our AI team.\n\nResponsibilities:\n- Design and implement ML models for production\n- Lead ML projects from conception to deployment\n- Mentor junior team members\n- Collaborate with product and engineering teams\n- Deploy models to production environments\n\nRequirements:\n- 5+ years software engineering experience\n- Strong Python programming skills\n- Experience with TensorFlow, scikit-learn, or PyTorch\n- Production ML deployment experience\n- Team leadership capability\n- Excellent communication skills\n\nNice to have:\n- Android/Mobile development background\n- Kaggle participation\n- Open source contributions\n\nBenefits:\n- Competitive salary\n- Flexible work arrangements\n- Health insurance\n- Learning budget\n",
-    "match_score": 80,
-    "match_reasons": [
-      "ML/AI role - matches your specialization",
-      "Python required - you have this skill",
-      "Senior role - matches your 15 years experience"
-    ],
-    "red_flags": [
-      "None"
-    ],
-    "recommendation": "Apply",
-    "cover_letter": "Dear Hiring Manager at Brain Station 23,\n\nI am writing to express my strong interest in the Senior Machine Learning Engineer position at Brain Station 23.\n\nWith 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.\n\nOver the past 22 days, I've built 18+ ML projects including:\n- Production sentiment analysis API (deployed and live)\n- Customer churn prediction system (85% accuracy, $300K business impact)\n- Deep learning image classifier (99.3% accuracy using transfer learning)\n- Active participation in 2 Kaggle competitions\n\nWhat sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.\n\nPortfolio: https://emdadhossain25.github.io/emdad-portfolio/\nGitHub: https://github.com/emdadhossain25\nKaggle: https://www.kaggle.com/emdadhossain25\n\nI would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Brain Station 23's success.\n\nBest regards,\nEmdad Hossain\nemdad.hossain321@gmail.com\n+880 1929 761478\n",
-    "status": "Ready to apply",
-    "processed_date": "2026-02-01T22:39:25.260062"
-  },
-  {
-    "id": "job_002",
-    "title": "ML Engineer",
-    "company": "Reve Systems",
-    "location": "Remote",
-    "posted_date": "2026-01-29",
+    "posted_date": "2026-01-25",
     "source": "LinkedIn",
-    "url": "https://www.linkedin.com/jobs/job-002",
-    "description": "\nML Engineer position for AI-powered customer service platform.\n\nWhat you'll do:\n- Build NLP models for chatbots\n- Deploy ML models as APIs\n- Work on sentiment analysis systems\n- Optimize model performance\n\nRequirements:\n- Python, ML frameworks\n- NLP experience\n- API development (Flask/FastAPI)\n- Remote work capability\n\nBonus:\n- Deployed ML APIs before\n- Portfolio of ML projects\n",
+    "url": "https://www.linkedin.com/jobs/view/4365676286/?alternateChannel=search&eBP=NON_CHARGEABLE_CHANNEL&refId=UyrbgRWkOF6bSEzgqYYktA%3D%3D&trackingId=jXNsSmHq%2FgCjTXrAizfBpg%3D%3D&trk=d_flagship3_search_srp_jobs&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3B5uPjUUh5RYiN80QphTROJw%3D%3D",
+    "description": "\nAt Optimizely, we're on a mission to help people unlock their digital potential. We do that by reinventing how marketing and product teams work to create and optimize digital experiences across all channels. With Optimizely One, our industry-first operating system for marketers, we offer teams flexibility and choice to build their stack their way with our fully SaaS, fully decoupled, and highly composable solution.\n\nWe are proud to help more than 10,000 businesses, including H&M, PayPal, Zoom, and Toyota, enrich their customer lifetime value, increase revenue and grow their brands. Our innovation and excellence have earned us numerous recognitions as a leader by industry analysts such as Gartner, Forrester, and IDC, reinforcing our role as a trailblazer in MarTech.\n\nAt our core, we believe work is about more than just numbers -- it's about the people. Our culture is dynamic and constantly evolving, shaped by every employee, their actions and their stories. With over 1600 Optimizers spread across 12 global locations, our diverse team embodies the \"One Optimizely\" spirit, emphasizing collaboration and continuous improvement, while fostering a culture where every voice is heard and valued.\n\nJoin us and become part of a company that's empowering people to unlock their digital potential!\n\nIntroduction\n\nSoftware Engineers in our team are hands-on builders who bridge the worlds of web engineering and intelligent automation. They understand how business goals translate into real-world integrations, crafting solutions that\n\nconnect platforms seamlessly and leverage modern AI techniques. Our engineers thrive in a fast-moving environment - designing, developing, and maintaining scalable integration systems while ensuring clean, maintainable, and secure code.\n\nThey are strong collaborators and self-starters who take ownership from concept to deployment, working closely with cross-functional teams to solve technical challenges creatively. A successful Software Engineer in this role demonstrates deep curiosity, technical excellence, and a strong ability to adapt - balancing robust engineering practices with innovative problem-solving in the areas of web systems, AI agents, and data-driven automation.\n\nExpert Services: an organization of 150+ people within Customer Success. \u201cCustomer-first\" organization.\n\nWorking Hours: Sunday to Thursday (10 AM to 6 PM), Hybrid\n\nResponsibilities:\n- Design, develop, and deploy integrations between internal and external platforms.\n- Build scalable and reliable backend and frontend components using JavaScript and TypeScript.\n- Work with APIs, webhooks, and data pipelines to automate workflows.\n- You will design, develop, and deploy solutions using leveraging Optimizely AI platform, or more traditional builds.\n- Collaborate with cross-functional teams to deliver innovative solutions and ensure seamless product integrations.\n- Contribute to our DevOps and infrastructure setup, supporting deployment and monitoring best practices.\n\n\nRequirements:\n- 3+ years of professional software engineering experience in web or integration development.\n- Strong proficiency in JavaScript and TypeScript.\n- Solid understanding of Git, GitHub, and version control workflows.\n- Knowledge of servers, infrastructure, and deployment pipelines.\n- Practical understanding of AI and ML concepts (Agents, Agentic AI, RAG, MCP server).\n- Experience in building integrations between multiple platforms (APIs, webhooks, SDKs).\n- A proactive self-starter with a collaborative team mindset.\n- Excellent communication skills to articulate ideas, discuss trade-offs, and collaborate with peers and stakeholders.\n- Experience with cloud platforms (e.g., AWS, GCP, Azure) and containerization tools (e.g., Docker, Kubernetes)\n- Experience working in agile, fast-moving environments with a focus on shipping high-quality code and robust solutions.\n- Experience building, delivering, and maintaining services that comprise modern PaaS/SaaS products is a plus\n\nBenefits:\n- Best-in-class compensation plans \n- Two annual festival bonuses \n- Recognition and rewards programs \n- Vacations days \n- Annual Work/Service Anniversary Leave \n- Parental leave (both maternity and paternity) \n- Health insurance \n- Reproductive benefits for both parents \n- Volunteering opportunities to make a difference \n- Chance to work alongside our incredible global team \n- Free communal transport facilities inside Dhaka to and from the office \n- Free catered lunch every day \n",
     "match_score": 70,
     "match_reasons": [
       "ML/AI role - matches your specialization",
-      "Python required - you have this skill",
-      "Remote-friendly - your preference"
+      "Senior role - matches your 15 years experience",
+      "Bangladesh-based - local opportunity"
     ],
     "red_flags": [
       "None"
     ],
     "recommendation": "Apply",
-    "cover_letter": "Dear Hiring Manager at Reve Systems,\n\nI am writing to express my strong interest in the ML Engineer position at Reve Systems.\n\nWith 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.\n\nOver the past 22 days, I've built 18+ ML projects including:\n- Production sentiment analysis API (deployed and live)\n- Customer churn prediction system (85% accuracy, $300K business impact)\n- Deep learning image classifier (99.3% accuracy using transfer learning)\n- Active participation in 2 Kaggle competitions\n\nWhat sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.\n\nPortfolio: https://emdadhossain25.github.io/emdad-portfolio/\nGitHub: https://github.com/emdadhossain25\nKaggle: https://www.kaggle.com/emdadhossain25\n\nI would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Reve Systems's success.\n\nBest regards,\nEmdad Hossain\nemdad.hossain321@gmail.com\n+880 1929 761478\n",
+    "cover_letter": "Dear Hiring Manager at Optimizely,\n\nI am writing to express my strong interest in the Software Engineer (Web + ML Integrations) position at Optimizely.\n\nWith 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.\n\nOver the past 22 days, I've built 18+ ML projects including:\n- Production sentiment analysis API (deployed and live)\n- Customer churn prediction system (85% accuracy, $300K business impact)\n- Deep learning image classifier (99.3% accuracy using transfer learning)\n- Active participation in 2 Kaggle competitions\n\nWhat sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.\n\nPortfolio: https://emdadhossain25.github.io/emdad-portfolio/\nGitHub: https://github.com/emdadhossain25\nKaggle: https://www.kaggle.com/emdadhossain25\n\nI would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Optimizely's success.\n\nBest regards,\nEmdad Hossain\nemdad.hossain321@gmail.com\n+880 1929 761478\n",
     "status": "Ready to apply",
-    "processed_date": "2026-02-01T22:39:33.343006"
-  },
-  {
-    "id": "job_003",
-    "title": "Junior Data Analyst",
-    "company": "Generic Corp",
-    "location": "Dhaka (On-site only)",
-    "posted_date": "2026-01-28",
-    "source": "BdJobs",
-    "url": "https://www.bdjobs.com/job-003",
-    "description": "\nEntry-level data analyst position.\n\nRequirements:\n- Fresh graduate\n- Basic Excel, PowerPoint\n- Willingness to learn\n\nSalary: 25,000 BDT/month\nOn-site: 9 AM - 6 PM, 6 days/week\n",
-    "match_score": 0,
-    "match_reasons": [
-      "Match based on keywords"
-    ],
-    "red_flags": [
-      "None"
-    ],
-    "recommendation": "Skip",
-    "cover_letter": null,
-    "status": "Skipped - low match",
-    "processed_date": "2026-02-01T22:39:35.799862"
+    "processed_date": "2026-02-01T23:04:02.590845"
   }
 ]

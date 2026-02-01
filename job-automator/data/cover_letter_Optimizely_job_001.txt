@@ -1,0 +1,24 @@
+Dear Hiring Manager at Optimizely,
+
+I am writing to express my strong interest in the Software Engineer (Web + ML Integrations) position at Optimizely.
+
+With 15 years of software engineering experience and recent intensive specialization in Machine Learning, I bring a unique combination of production expertise and cutting-edge ML skills. At Mir Info Systems, I led a team of 5 engineers and delivered production applications serving 10,000+ users with 99.9% crash-free sessions.
+
+Over the past 22 days, I've built 18+ ML projects including:
+- Production sentiment analysis API (deployed and live)
+- Customer churn prediction system (85% accuracy, $300K business impact)
+- Deep learning image classifier (99.3% accuracy using transfer learning)
+- Active participation in 2 Kaggle competitions
+
+What sets me apart is my ability to ship production ML systems, not just experiment in notebooks. I've deployed REST APIs, built full-stack applications, and led teams - skills that bridge the gap between ML research and real-world deployment.
+
+Portfolio: https://emdadhossain25.github.io/emdad-portfolio/
+GitHub: https://github.com/emdadhossain25
+Kaggle: https://www.kaggle.com/emdadhossain25
+
+I would welcome the opportunity to discuss how my unique combination of experience and ML expertise could contribute to Optimizely's success.
+
+Best regards,
+Emdad Hossain
+emdad.hossain321@gmail.com
++880 1929 761478

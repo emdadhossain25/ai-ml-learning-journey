@@ -46,90 +46,119 @@ def add_sample_jobs():
     sample_jobs = [
         {
             "id": "job_001",
-            "title": "Senior Machine Learning Engineer",
-            "company": "Brain Station 23",
+            "title": "Software Engineer (Web + ML Integrations)",
+            "company": "Optimizely",
             "location": "Dhaka, Bangladesh (Hybrid)",
-            "posted_date": "2026-01-30",
-            "source": "BdJobs",
-            "url": "https://www.bdjobs.com/job-001",
+            "posted_date": "2026-01-25",
+            "source": "LinkedIn",
+            "url": "https://www.linkedin.com/jobs/view/4365676286/?alternateChannel=search&eBP=NON_CHARGEABLE_CHANNEL&refId=UyrbgRWkOF6bSEzgqYYktA%3D%3D&trackingId=jXNsSmHq%2FgCjTXrAizfBpg%3D%3D&trk=d_flagship3_search_srp_jobs&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3B5uPjUUh5RYiN80QphTROJw%3D%3D",
             "description": """
-We are seeking a Senior Machine Learning Engineer to join our AI team.
+At Optimizely, we're on a mission to help people unlock their digital potential. We do that by reinventing how marketing and product teams work to create and optimize digital experiences across all channels. With Optimizely One, our industry-first operating system for marketers, we offer teams flexibility and choice to build their stack their way with our fully SaaS, fully decoupled, and highly composable solution.
+
+We are proud to help more than 10,000 businesses, including H&M, PayPal, Zoom, and Toyota, enrich their customer lifetime value, increase revenue and grow their brands. Our innovation and excellence have earned us numerous recognitions as a leader by industry analysts such as Gartner, Forrester, and IDC, reinforcing our role as a trailblazer in MarTech.
+
+At our core, we believe work is about more than just numbers -- it's about the people. Our culture is dynamic and constantly evolving, shaped by every employee, their actions and their stories. With over 1600 Optimizers spread across 12 global locations, our diverse team embodies the "One Optimizely" spirit, emphasizing collaboration and continuous improvement, while fostering a culture where every voice is heard and valued.
+
+Join us and become part of a company that's empowering people to unlock their digital potential!
+
+Introduction
+
+Software Engineers in our team are hands-on builders who bridge the worlds of web engineering and intelligent automation. They understand how business goals translate into real-world integrations, crafting solutions that
+
+connect platforms seamlessly and leverage modern AI techniques. Our engineers thrive in a fast-moving environment - designing, developing, and maintaining scalable integration systems while ensuring clean, maintainable, and secure code.
+
+They are strong collaborators and self-starters who take ownership from concept to deployment, working closely with cross-functional teams to solve technical challenges creatively. A successful Software Engineer in this role demonstrates deep curiosity, technical excellence, and a strong ability to adapt - balancing robust engineering practices with innovative problem-solving in the areas of web systems, AI agents, and data-driven automation.
+
+Expert Services: an organization of 150+ people within Customer Success. “Customer-first" organization.
+
+Working Hours: Sunday to Thursday (10 AM to 6 PM), Hybrid
 
 Responsibilities:
-- Design and implement ML models for production
-- Lead ML projects from conception to deployment
-- Mentor junior team members
-- Collaborate with product and engineering teams
-- Deploy models to production environments
+- Design, develop, and deploy integrations between internal and external platforms.
+- Build scalable and reliable backend and frontend components using JavaScript and TypeScript.
+- Work with APIs, webhooks, and data pipelines to automate workflows.
+- You will design, develop, and deploy solutions using leveraging Optimizely AI platform, or more traditional builds.
+- Collaborate with cross-functional teams to deliver innovative solutions and ensure seamless product integrations.
+- Contribute to our DevOps and infrastructure setup, supporting deployment and monitoring best practices.
+
 
 Requirements:
-- 5+ years software engineering experience
-- Strong Python programming skills
-- Experience with TensorFlow, scikit-learn, or PyTorch
-- Production ML deployment experience
-- Team leadership capability
-- Excellent communication skills
-
-Nice to have:
-- Android/Mobile development background
-- Kaggle participation
-- Open source contributions
+- 3+ years of professional software engineering experience in web or integration development.
+- Strong proficiency in JavaScript and TypeScript.
+- Solid understanding of Git, GitHub, and version control workflows.
+- Knowledge of servers, infrastructure, and deployment pipelines.
+- Practical understanding of AI and ML concepts (Agents, Agentic AI, RAG, MCP server).
+- Experience in building integrations between multiple platforms (APIs, webhooks, SDKs).
+- A proactive self-starter with a collaborative team mindset.
+- Excellent communication skills to articulate ideas, discuss trade-offs, and collaborate with peers and stakeholders.
+- Experience with cloud platforms (e.g., AWS, GCP, Azure) and containerization tools (e.g., Docker, Kubernetes)
+- Experience working in agile, fast-moving environments with a focus on shipping high-quality code and robust solutions.
+- Experience building, delivering, and maintaining services that comprise modern PaaS/SaaS products is a plus
 
 Benefits:
-- Competitive salary
-- Flexible work arrangements
-- Health insurance
-- Learning budget
-"""
-        },
-        {
-            "id": "job_002",
-            "title": "ML Engineer",
-            "company": "Reve Systems",
-            "location": "Remote",
-            "posted_date": "2026-01-29",
-            "source": "LinkedIn",
-            "url": "https://www.linkedin.com/jobs/job-002",
-            "description": """
-ML Engineer position for AI-powered customer service platform.
-
-What you'll do:
-- Build NLP models for chatbots
-- Deploy ML models as APIs
-- Work on sentiment analysis systems
-- Optimize model performance
-
-Requirements:
-- Python, ML frameworks
-- NLP experience
-- API development (Flask/FastAPI)
-- Remote work capability
-
-Bonus:
-- Deployed ML APIs before
-- Portfolio of ML projects
-"""
-        },
-        {
-            "id": "job_003",
-            "title": "Junior Data Analyst",
-            "company": "Generic Corp",
-            "location": "Dhaka (On-site only)",
-            "posted_date": "2026-01-28",
-            "source": "BdJobs",
-            "url": "https://www.bdjobs.com/job-003",
-            "description": """
-Entry-level data analyst position.
-
-Requirements:
-- Fresh graduate
-- Basic Excel, PowerPoint
-- Willingness to learn
-
-Salary: 25,000 BDT/month
-On-site: 9 AM - 6 PM, 6 days/week
+- Best-in-class compensation plans 
+- Two annual festival bonuses 
+- Recognition and rewards programs 
+- Vacations days 
+- Annual Work/Service Anniversary Leave 
+- Parental leave (both maternity and paternity) 
+- Health insurance 
+- Reproductive benefits for both parents 
+- Volunteering opportunities to make a difference 
+- Chance to work alongside our incredible global team 
+- Free communal transport facilities inside Dhaka to and from the office 
+- Free catered lunch every day 
 """
         }
+#         ,
+#         {
+#             "id": "job_002",
+#             "title": "ML Engineer",
+#             "company": "Reve Systems",
+#             "location": "Remote",
+#             "posted_date": "2026-01-29",
+#             "source": "LinkedIn",
+#             "url": "https://www.linkedin.com/jobs/job-002",
+#             "description": """
+# ML Engineer position for AI-powered customer service platform.
+
+# What you'll do:
+# - Build NLP models for chatbots
+# - Deploy ML models as APIs
+# - Work on sentiment analysis systems
+# - Optimize model performance
+
+# Requirements:
+# - Python, ML frameworks
+# - NLP experience
+# - API development (Flask/FastAPI)
+# - Remote work capability
+
+# Bonus:
+# - Deployed ML APIs before
+# - Portfolio of ML projects
+# """
+#         },
+#         {
+#             "id": "job_003",
+#             "title": "Junior Data Analyst",
+#             "company": "Generic Corp",
+#             "location": "Dhaka (On-site only)",
+#             "posted_date": "2026-01-28",
+#             "source": "BdJobs",
+#             "url": "https://www.bdjobs.com/job-003",
+#             "description": """
+# Entry-level data analyst position.
+
+# Requirements:
+# - Fresh graduate
+# - Basic Excel, PowerPoint
+# - Willingness to learn
+
+# Salary: 25,000 BDT/month
+# On-site: 9 AM - 6 PM, 6 days/week
+# """
+#         }
     ]
     
     return sample_jobs
