@@ -1,0 +1,23 @@
+# Technical Expertise
+
+## Machine Learning
+- Supervised Learning: Logistic Regression, Random Forest, XGBoost, Gradient Boosting
+- Unsupervised Learning: K-Means clustering, PCA
+- Deep Learning: CNNs (image classification), LSTMs (time series), Transfer Learning
+- NLP: Sentiment analysis, TF-IDF vectorization, Transformers
+- Model Evaluation: Cross-validation, ROC-AUC, precision/recall, F1-score
+
+## Frameworks & Tools
+- Python: NumPy, Pandas, Matplotlib, Scikit-learn
+- Deep Learning: TensorFlow, Keras, PyTorch
+- NLP: Hugging Face Transformers, LangChain
+- Databases: ChromaDB, Vector databases
+- Deployment: Flask, Gunicorn, Render.com, Docker
+- Version Control: Git, GitHub
+
+## Software Engineering (15 years)
+- Android Development: Java, Kotlin (10+ production apps)
+- Team Leadership: Led team of 5 engineers
+- Architecture: MVVM, Clean Architecture, Design Patterns
+- Production: 99.9% crash-free rate, 10K+ users
+- CI/CD: GitHub Actions, Automated testing

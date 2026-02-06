@@ -1,0 +1,15 @@
+# My Machine Learning Journey
+
+I started learning Machine Learning on Day 1 with Python fundamentals. Over 27 days, I built 19+ projects including:
+
+- Customer churn prediction (85% accuracy, $300K business impact)
+- Sentiment analysis API (96.7% accuracy, deployed to production on Render.com)
+- Deep learning image classifier (99.3% accuracy using transfer learning with VGG16)
+- LSTM time series forecasting (1.8°C MAE for temperature prediction)
+- Job application automator using OpenAI GPT (97.5% time savings)
+
+I deployed a production REST API using Flask and Gunicorn. The sentiment analysis API is live and accessible via HTTPS with proper error handling and CORS support.
+
+My technical skills include: Python, scikit-learn, TensorFlow, Keras, Hugging Face Transformers, LangChain, ChromaDB, and production deployment.
+
+I have 15 years of software engineering experience, led a team of 5 engineers, and shipped apps with 10K+ users and 99.9% crash-free sessions.

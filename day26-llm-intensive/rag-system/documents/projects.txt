@@ -1,0 +1,31 @@
+# Key Projects
+
+## 1. Sentiment Analysis API (Day 21)
+Production REST API deployed on Render.com
+- Tech Stack: Flask, scikit-learn, TF-IDF, Logistic Regression
+- Accuracy: 96.7%
+- Features: /analyze, /batch endpoints, health checks
+- Business Value: Automate customer review analysis
+
+## 2. Customer Churn Prediction (Day 15)
+Machine learning model to predict customer churn
+- Accuracy: 85%
+- Techniques: SMOTE for class imbalance, XGBoost
+- Business Impact: $300K annual savings through early intervention
+
+## 3. Image Classifier (Day 13)
+Deep learning model using transfer learning
+- Accuracy: 99.3% on CIFAR-10
+- Architecture: VGG16 pretrained on ImageNet, fine-tuned
+- Demonstrates: Transfer learning mastery
+
+## 4. Job Application Automator (Day 23)
+AI-powered automation system
+- Tech: OpenAI GPT-3.5, Python, GitHub Actions
+- Features: Job matching, cover letter generation
+- Impact: 97.5% time savings (80 min → 2 min per application)
+
+## 5. Kaggle Competitions
+- Titanic: Classification (survival prediction)
+- House Prices: Regression (price prediction)
+- Techniques: Feature engineering, ensemble methods
