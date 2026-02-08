@@ -24,14 +24,13 @@ class AzureRAGPipeline:
     
     def __init__(
         self,
-        embedding_model_name: str = "all-MiniLM-L6-v2",  # FREE local model
-        chunk_size: int = 400,  # Smaller chunks = fewer tokens to Azure
+        embedding_model_name: str = "all-MiniLM-L6-v2",
+        chunk_size: int = 400,
         chunk_overlap: int = 50
     ):
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         
-        # Use FREE local embeddings (saves Azure credits!)
         logger.info(f"🆓 Using FREE local embeddings: {embedding_model_name}")
         self.embedding_model = SentenceTransformer(embedding_model_name)
         self.embedding_dim = self.embedding_model.get_sentence_embedding_dimension()
@@ -43,7 +42,17 @@ class AzureRAGPipeline:
     def load_documents(self, documents_dir: str) -> List[Dict]:
         """Load all .txt files from directory"""
         documents = []
-        docs_path = Path(documents_dir)
+        
+        # Get absolute path
+        if not os.path.isabs(documents_dir):
+            # Relative to project root
+            base_dir = Path(__file__).parent.parent
+            docs_path = base_dir / documents_dir
+        else:
+            docs_path = Path(documents_dir)
+        
+        if not docs_path.exists():
+            raise FileNotFoundError(f"Documents directory not found: {docs_path}")
         
         for file_path in docs_path.glob("*.txt"):
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -54,14 +63,17 @@ class AzureRAGPipeline:
                     'path': str(file_path)
                 })
         
-        logger.info(f"✅ Loaded {len(documents)} documents")
+        if not documents:
+            raise ValueError(f"No .txt files found in {docs_path}")
+        
+        logger.info(f"✅ Loaded {len(documents)} documents from {docs_path}")
         return documents
     
     def chunk_text(self, text: str, source: str) -> List[Dict]:
         """Split text into semantic chunks"""
         chunks = []
         
-        # Split by double newline (paragraphs) first
+        # Split by double newline (paragraphs)
         paragraphs = text.split('\n\n')
         
         current_chunk = ""
@@ -70,7 +82,6 @@ class AzureRAGPipeline:
             if not para:
                 continue
             
-            # If adding paragraph exceeds chunk size, save current chunk
             if len(current_chunk) + len(para) > self.chunk_size and current_chunk:
                 chunks.append({
                     'text': current_chunk.strip(),
@@ -80,7 +91,6 @@ class AzureRAGPipeline:
             else:
                 current_chunk += "\n\n" + para if current_chunk else para
         
-        # Add final chunk
         if current_chunk:
             chunks.append({
                 'text': current_chunk.strip(),
@@ -90,8 +100,7 @@ class AzureRAGPipeline:
         return chunks
     
     def build_index(self, documents_dir: str):
-        """Build FAISS index from documents (FREE - uses local embeddings)"""
-        # Load documents
+        """Build FAISS index from documents"""
         documents = self.load_documents(documents_dir)
         
         # Chunk all documents
@@ -102,15 +111,23 @@ class AzureRAGPipeline:
         
         logger.info(f"📝 Created {len(all_chunks)} chunks")
         
-        # Generate embeddings (LOCAL - FREE!)
-        logger.info("🔄 Generating embeddings (local, free)...")
+        # Generate embeddings
+        logger.info("🔄 Generating embeddings...")
         chunk_texts = [chunk['text'] for chunk in all_chunks]
+        
+        # FIX: Ensure batch processing
         embeddings = self.embedding_model.encode(
             chunk_texts,
             show_progress_bar=True,
             convert_to_numpy=True,
-            batch_size=32  # Process in batches for efficiency
+            batch_size=32
         )
+        
+        # FIX: Ensure 2D array
+        if len(embeddings.shape) == 1:
+            embeddings = embeddings.reshape(1, -1)
+        
+        logger.info(f"✅ Embeddings shape: {embeddings.shape}")
         
         # Create FAISS index
         logger.info("🏗️  Building FAISS index...")
@@ -120,23 +137,21 @@ class AzureRAGPipeline:
         self.chunks = chunk_texts
         self.metadata = all_chunks
         
-        logger.info(f"✅ Index built: {len(self.chunks)} chunks ready for retrieval")
+        logger.info(f"✅ Index built: {len(self.chunks)} chunks")
     
     def retrieve(self, query: str, top_k: int = 3) -> List[Dict]:
-        """
-        Retrieve relevant chunks (FREE - local embeddings)
-        
-        Args:
-            query: User question
-            top_k: Number of chunks to retrieve (keep <=3 to save Azure tokens)
-        """
+        """Retrieve relevant chunks"""
         if self.index is None:
             raise ValueError("❌ Index not built. Call build_index() first.")
         
-        # Embed query (LOCAL - FREE!)
+        # Embed query
         query_embedding = self.embedding_model.encode([query])
         
-        # Search FAISS (FREE!)
+        # FIX: Ensure 2D array
+        if len(query_embedding.shape) == 1:
+            query_embedding = query_embedding.reshape(1, -1)
+        
+        # Search FAISS
         distances, indices = self.index.search(
             query_embedding.astype('float32'),
             top_k
@@ -156,23 +171,43 @@ class AzureRAGPipeline:
     
     def save_index(self, save_dir: str = "data/faiss_index"):
         """Save index to disk"""
-        os.makedirs(save_dir, exist_ok=True)
+        # Get absolute path
+        if not os.path.isabs(save_dir):
+            base_dir = Path(__file__).parent.parent
+            save_path = base_dir / save_dir
+        else:
+            save_path = Path(save_dir)
         
-        faiss.write_index(self.index, f"{save_dir}/index.faiss")
+        os.makedirs(save_path, exist_ok=True)
         
-        with open(f"{save_dir}/metadata.pkl", 'wb') as f:
+        faiss.write_index(self.index, str(save_path / "index.faiss"))
+        
+        with open(save_path / "metadata.pkl", 'wb') as f:
             pickle.dump({
                 'chunks': self.chunks,
                 'metadata': self.metadata
             }, f)
         
-        logger.info(f"💾 Index saved to {save_dir}")
+        logger.info(f"💾 Index saved to {save_path}")
     
     def load_index(self, save_dir: str = "data/faiss_index"):
-        """Load pre-built index (skip rebuilding)"""
-        self.index = faiss.read_index(f"{save_dir}/index.faiss")
+        """Load pre-built index"""
+        # Get absolute path
+        if not os.path.isabs(save_dir):
+            base_dir = Path(__file__).parent.parent
+            load_path = base_dir / save_dir
+        else:
+            load_path = Path(save_dir)
         
-        with open(f"{save_dir}/metadata.pkl", 'rb') as f:
+        index_file = load_path / "index.faiss"
+        metadata_file = load_path / "metadata.pkl"
+        
+        if not index_file.exists():
+            raise FileNotFoundError(f"Index not found: {index_file}")
+        
+        self.index = faiss.read_index(str(index_file))
+        
+        with open(metadata_file, 'rb') as f:
             data = pickle.load(f)
             self.chunks = data['chunks']
             self.metadata = data['metadata']
@@ -181,8 +216,7 @@ class AzureRAGPipeline:
 
 
 if __name__ == "__main__":
-    # Build index once (FREE)
-    print("\n🚀 Building RAG Index (FREE - local embeddings)")
+    print("\n🚀 Building RAG Index")
     print("="*60)
     
     rag = AzureRAGPipeline()
@@ -192,7 +226,6 @@ if __name__ == "__main__":
     print("\n✅ Index built and saved!")
     print("="*60)
     
-    # Test retrieval (FREE)
     print("\n🔍 Testing Retrieval")
     print("="*60)
     
@@ -202,4 +235,4 @@ if __name__ == "__main__":
         print(f"\n{i}. [{result['source']}] Similarity: {result['similarity']:.3f}")
         print(f"   {result['text'][:150]}...")
     
-    print("\n✅ Retrieval working! Ready for agentic layer.")
+    print("\n✅ Ready!")
