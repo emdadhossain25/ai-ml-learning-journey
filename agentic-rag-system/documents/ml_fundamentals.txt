@@ -1,0 +1,51 @@
+# Machine Learning Fundamentals
+
+## Supervised Learning
+Supervised learning uses labeled data to train models. The algorithm learns from input-output pairs to predict outcomes for new data. Common types include classification (predicting categories) and regression (predicting continuous values).
+
+Examples of supervised learning:
+- Email spam detection (classification)
+- House price prediction (regression)
+- Image recognition (classification)
+- Stock price forecasting (regression)
+
+## Unsupervised Learning
+Unsupervised learning finds patterns in unlabeled data. The algorithm discovers hidden structures without predefined labels. Main types include clustering and dimensionality reduction.
+
+Examples of unsupervised learning:
+- Customer segmentation (clustering)
+- Anomaly detection (clustering)
+- Topic modeling (dimensionality reduction)
+- Data compression (dimensionality reduction)
+
+## Deep Learning
+Deep learning uses neural networks with multiple layers to learn hierarchical representations of data. It excels at complex tasks like image recognition, natural language processing, and speech recognition.
+
+Key architectures:
+- CNNs (Convolutional Neural Networks): Best for image tasks
+- RNNs/LSTMs (Recurrent Neural Networks): Best for sequential data
+- Transformers: Best for NLP tasks, attention mechanism
+
+## Model Evaluation
+Model evaluation measures how well a model performs on unseen data.
+
+Classification metrics:
+- Accuracy: Overall correctness
+- Precision: Of predicted positives, how many are correct
+- Recall: Of actual positives, how many were caught
+- F1-Score: Harmonic mean of precision and recall
+
+Regression metrics:
+- MAE (Mean Absolute Error): Average magnitude of errors
+- RMSE (Root Mean Squared Error): Penalizes large errors more
+- R-squared: Proportion of variance explained
+
+## Overfitting and Regularization
+Overfitting occurs when a model memorizes training data but fails on new data. It happens when the model is too complex relative to the data available.
+
+Solutions to overfitting:
+- Regularization: L1 (Lasso), L2 (Ridge)
+- Cross-validation: K-fold validation
+- More training data
+- Dropout (for neural networks)
+- Early stopping

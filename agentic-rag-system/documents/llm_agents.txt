@@ -1,0 +1,85 @@
+# LLM Agents and Tool Use
+
+## What are LLM Agents?
+LLM agents are AI systems that can reason, plan, and use tools to accomplish tasks. Unlike simple chatbots, agents can break down complex tasks, use external tools, and iteratively work toward goals.
+
+## Agent Architecture
+Core components:
+1. LLM Brain: Makes decisions and plans
+2. Tools: Functions the agent can call (search, calculator, database)
+3. Memory: Maintains conversation and task context
+4. Planning: Breaks complex tasks into steps
+5. Reflection: Evaluates own performance and adjusts
+
+## ReAct Framework
+ReAct (Reasoning + Acting) is a popular agent pattern:
+
+Thought: Reason about what to do next
+Action: Execute a tool or take an action
+Observation: Observe the result
+... (repeat until task complete)
+Final Answer: Return result to user
+
+Example:
+Thought: User wants weather for Paris
+Action: search_tool("Paris weather")
+Observation: 18°C, sunny
+Thought: I have the answer
+Final Answer: Weather in Paris is 18°C and sunny.
+
+## Tool Calling
+Tools extend agent capabilities:
+- Search: Web search, document search
+- Calculator: Mathematical operations
+- Code execution: Run Python/JavaScript
+- Database: Query structured data
+- API calls: External services
+
+Tool definition includes:
+- Name: Identifier
+- Description: What it does (LLM reads this!)
+- Parameters: What inputs it needs
+- Return type: What it outputs
+
+## Agent Memory
+Short-term memory: Current conversation context
+Long-term memory: Vector store of past interactions
+Entity memory: Facts about people, places, things
+
+Memory enables:
+- Context awareness across turns
+- Learning from past interactions
+- Personalization
+
+## Multi-Agent Systems
+Multiple specialized agents working together:
+- Planner agent: Breaks down tasks
+- Researcher agent: Gathers information
+- Writer agent: Generates content
+- Critic agent: Reviews and improves
+
+Agents can collaborate, delegate, and debate.
+
+## Self-Reflection and Critique
+Advanced agents can evaluate their own outputs:
+
+1. Generate initial response
+2. Critique response (accuracy, completeness, tone)
+3. Refine based on critique
+4. Repeat until satisfactory
+
+This reduces errors and improves quality.
+
+## Agent Challenges
+- Tool selection: Choosing right tool for task
+- Error handling: Graceful failures when tools fail
+- Infinite loops: Agent gets stuck in reasoning loop
+- Cost: Multiple LLM calls increase latency and cost
+- Reliability: Agents can make mistakes in complex reasoning
+
+## Best Practices
+- Clear tool descriptions: LLM needs to understand when to use each tool
+- Fallback strategies: Handle tool failures gracefully
+- Maximum iterations: Prevent infinite loops
+- Logging: Track agent reasoning for debugging
+- Human-in-the-loop: Critical decisions require human approval

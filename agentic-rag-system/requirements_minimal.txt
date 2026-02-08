@@ -1,0 +1,30 @@
+# Minimal compatible versions for free tier
+# Compatible with tensorflow 2.12.0, chromadb 1.4.1, gradio 4.44.1
+
+# Core langchain (downgraded to match langchain-community 0.0.20)
+langchain==0.1.0
+langchain-core==0.1.52
+langsmith==0.0.87
+
+# Google GenAI (compatible with protobuf <5.0)
+langchain-google-genai==0.0.11
+google-generativeai==0.3.2
+
+# Embeddings
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+
+# Required by existing packages
+fastapi==0.109.0
+uvicorn==0.27.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# Protobuf (compatible with tensorflow 2.12 and google-ai)
+protobuf==3.20.3
+
+# Pydantic (compatible)
+pydantic==2.5.3
+
+# Utilities
+pypdf==4.0.0

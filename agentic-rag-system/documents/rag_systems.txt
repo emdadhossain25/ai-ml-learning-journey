@@ -1,0 +1,63 @@
+# RAG Systems - Retrieval Augmented Generation
+
+## What is RAG?
+RAG (Retrieval-Augmented Generation) combines information retrieval with language generation. Instead of relying solely on parametric knowledge, the model retrieves relevant documents and uses them to generate grounded responses.
+
+## RAG Architecture
+The typical RAG pipeline consists of:
+
+1. Document Ingestion: Load and preprocess documents
+2. Chunking: Split documents into manageable pieces (200-500 tokens)
+3. Embedding: Convert chunks to dense vectors using embedding models
+4. Storage: Store embeddings in vector database (FAISS, Pinecone, Qdrant)
+5. Retrieval: Find relevant chunks for user query using semantic search
+6. Generation: LLM generates answer using retrieved context
+
+## Advantages of RAG
+- Reduced hallucinations: Grounded in actual documents
+- Up-to-date information: Can update knowledge base without retraining
+- Source attribution: Can cite which documents were used
+- Domain-specific: Can specialize without fine-tuning entire model
+- Cost-effective: Cheaper than fine-tuning large models
+
+## Chunking Strategies
+Effective chunking is critical for RAG performance:
+
+- Fixed-size chunking: Simple, consistent size (e.g., 500 characters)
+- Semantic chunking: Split at paragraph or section boundaries
+- Sliding window: Overlapping chunks preserve context
+- Recursive chunking: Split hierarchically (document → section → paragraph)
+
+Optimal chunk size: 200-500 tokens balances context and precision.
+
+## Embedding Models
+Embedding models convert text to dense vectors capturing semantic meaning:
+
+- Sentence-BERT: Fast, good for general domains
+- OpenAI embeddings: High quality, API-based
+- Instructor embeddings: Task-specific, customizable
+- E5 embeddings: Open source, multilingual
+
+Vector dimensions typically range from 384 to 1536.
+
+## Retrieval Methods
+- Dense retrieval: Semantic similarity using embeddings (cosine, dot product)
+- Sparse retrieval: Keyword matching (BM25, TF-IDF)
+- Hybrid retrieval: Combine dense + sparse for best results
+- Re-ranking: Use cross-encoder to re-score top candidates
+
+Top-K retrieval: Typically retrieve 3-5 most relevant chunks.
+
+## Challenges in RAG
+- Retrieval quality: Poor retrieval leads to poor generation
+- Context length: LLMs have token limits (4K-128K tokens)
+- Chunking artifacts: Information split across chunks may be missed
+- Hallucination: LLM may still generate facts not in context
+- Latency: Retrieval + generation takes time
+
+## Advanced RAG Techniques
+- Self-RAG: Model decides when to retrieve
+- Corrective RAG: Validates retrieved documents, re-retrieves if needed
+- Agentic RAG: Agent with tools decides retrieval strategy
+- HyDE: Generate hypothetical document, use it for retrieval
+- Query rewriting: Reformulate query for better retrieval

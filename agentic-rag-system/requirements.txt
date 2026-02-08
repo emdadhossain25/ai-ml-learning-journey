@@ -1,0 +1,22 @@
+# Core dependencies - Updated versions
+langchain==0.3.15
+langchain-google-genai==2.0.8
+google-generativeai==0.8.3
+sentence-transformers==3.3.1
+faiss-cpu==1.9.0
+python-dotenv==1.0.1
+
+# API & Interface - Updated versions
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.6
+
+# Utilities - Updated versions
+pypdf==5.1.0
+python-multipart==0.0.20
+
+# Additional explicit dependencies to resolve conflicts
+packaging>=24.0
+langchain-core>=0.3.78,<1.0.0
+protobuf>=5.0,<7.0
+numpy>=1.22,<1.24
